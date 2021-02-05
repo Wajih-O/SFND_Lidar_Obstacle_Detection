@@ -6,9 +6,9 @@ Lidar sensing gives us high resolution data by sending out thousands of laser si
 
 ## Lidar pcd processing pipeline
 
-The project implements a processing pipeline applied on a stream pcd:
+The project implements a processing pipeline applied on a PCD stream:
 1. A voxel sub-sampling, region cropping and ego car roof points filtering. Entry point: `processPointClouds.cpp` `ProcessPointClouds<PointT>::FilterCloud`
-2. A road road (point cloud) segmentation: using RANSAC for planes to separate obstacles from road points. Entry point: `quiz/ransaz/ransac_plane.h`
+2. A road (point cloud) segmentation: using RANSAC for planes to separate obstacles from road points. Entry point: `quiz/ransac/ransac_plane.h`
 3. Obstacles clustering (segmentation) with euclidean clustering (using K-D tree). Entry point `quiz/cluster/cluster.h`
 
 The rendered output is shown below:
